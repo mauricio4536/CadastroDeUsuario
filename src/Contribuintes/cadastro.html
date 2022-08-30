@@ -8,38 +8,46 @@
         <link type="text/css" rel="stylesheet" href="../../css/bootstrap-5.2.0/bootstrap.css"></link>
         <link type="text/css" rel="stylesheet" href="../../css/cadastro.css"></link>
         <script src="../../js/Jquery/jquery-3.6.0.min.js"></script>
+        <script src="../../js/jquery-mask/jquery.mask.js"></script>
         <script src="../../js/bootstrap-5.2.0/bootstrap.js"></script>
     </head>
     <body>
-        <div class="container">
-          <h3>Cadastro de contribuinte</h3>
-            <form class="row g-3">
-              <div class="row">
-                <div class="col-md-4">
+        <div class="container mt-3">
+          <h3 class="text-center">Cadastro de contribuinte</h3>
+            <form class="row  mt-3">
+              <div class="row mt-3">
+                <div class="col">
                   <label for="cpf" class="form-label">CPF</label>
-                  <input type="text" class="form-control" id="cpf"placeholder="999.999.999-99">
-                  <span class="valid-cpf"></span>
+                  <input type="text" class="form-control mask_cpf" id="cpf"placeholder="999.999.999-99">
+                  <span class="valid-cpf text-danger mt-2"></span>
                 </div>
-              <div class="col-md-4">
-                <label for="nome" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="nome">
-                <span class="valid-nome"></span>
-              </div>
-            </div>
-              <div class="row">
-                <div class="col-md-4">
-                  <label for="validationCustomUsername" class="form-label">Renda Mensal</label>
-                  <div class="input-group has-validation">
-                  <span class="input-group-text" id="inputGroupPrepend"><R1>$</R1></span>
-                  <input type="number" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                  <div class="invalid-feedback">
-                    Please choose a username.
+                <div class="col">
+                    <label for="nome" class="form-label">Nome Completo</label>
+                    <input type="text" class="form-control" id="nome">
+                    <span class="valid-nome text-danger mt-2"></span>
                 </div>
               </div>
-            </div>
-          </div>
-        </form>
-      </div>
+              <div class="row mt-3">
+                <div class="col">
+                    <label for="numero_dependentes" class="form-label">Número de Dependentes</label>
+                    <input type="text" class="form-control" id="numero_dependentes">
+                    <span class="valid-numero-dependentes text-danger mt-2"></span>
+                </div>
+                <div class="col">
+                    <label for="renda_mensal" class="form-label">Renda Mensal</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend"><R1>$</R1></span>
+                        <input type="number" class="form-control" id="renda_mensal" aria-describedby="inputGroupPrepend">
+                    </div>
+                    <span class="valid-renda-mensal text-danger mt-2"></span>
+                </div>
+                <div class="row mt-3 px-0 text-end">
+                    <div class="col px-0">
+                        <button id="btSalvar" type="button" class="btn btn-success" onclick="toSave()">SALVAR</button>                        
+                    </div>
+                </div>
+            </form>
+        </div>
         <script src="../../js/cadastro.js"></script>
   </body>
 </html>
