@@ -11,14 +11,35 @@
         <script src="../../js/bootstrap-5.2.0/bootstrap.js"></script>
     </head>
     <body>
-        <h3>Cadastro de contribuinte</h3>
-        <form action="">
-            <div> <label for="">CPF</label><input type="text"></div>
-            <div><label for="">NOME</label><input type="text"></div>
-            <div><label for="">NÚMERO DE DEPENDENTES</label><input type="number"></div>
-            <div><label for="">RENDA BRUTA MENSAL</label><input type="text"></div>
-            <input type="button" value="Salvar">
+        <div class="container">
+          <h3>Cadastro de contribuinte</h3>
+            <form class="row g-3">
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="cpf" class="form-label">CPF</label>
+                  <input type="text" class="form-control" id="cpf"placeholder="999.999.999-99">
+                  <span class="valid-cpf"></span>
+                </div>
+              <div class="col-md-4">
+                <label for="nome" class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="nome">
+                <span class="valid-nome"></span>
+              </div>
+            </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="validationCustomUsername" class="form-label">Renda Mensal</label>
+                  <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend"><R1>$</R1></span>
+                  <input type="number" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+              </div>
+            </div>
+          </div>
         </form>
+      </div>
         <script src="../../js/cadastro.js"></script>
-    </body>
+  </body>
 </html>
