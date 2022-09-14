@@ -1,5 +1,5 @@
 //window.alert('Minha primeira mensagem')
-//window.confirm('este site ultiliza coockies voce aceita ?')
+//confirm('este site ultiliza coockies voce aceita ?')
 
 function toSave(url) {
     if (IsvalidForm()) $("#passenger-form").submit();

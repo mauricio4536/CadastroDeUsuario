@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de usuário</title>
+        <link type="text/css" rel="stylesheet" href="../../css/bootstrap-5.2.0/bootstrap.css"></link>
+        <link type="text/css" rel="stylesheet" href="../../css/cadastro.css"></link>
+        <script src="../../js/Jquery/jquery-3.6.0.min.js"></script>
+        <script src="../../js/jquery-mask/jquery.mask.js"></script>
+        <script src="../../js/bootstrap-5.2.0/bootstrap.js"></script>
+    </head>
+    <body>
+        <div class="container mt-3">
+            <h4 class="text-center">Dependente do contribuinte</h4>
+            <form class="row mt-3">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="nome" class="form-label">Nome completo</label>
+                        <input type="text" class="form-control" id="nomeCompleto">
+                        <span class="valid-nome-completo text-danger mt-2"></span>
+                    </div>
+                    <div class="col">
+                        <label for="cpf" class="form-label">CPF</label>
+                        <input type="text" class="form-control mask_cpf" id="cpf" placeholder="999.999.999-99">
+                        <span class="valid-cpf text-danger mt-2"></span>
+                    </div>
+                    <div class="col">
+                        <label for="inputGrau de Parentesco3" class="form-label">Grau de Parentesco</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Selecionar </option>
+                            <option value="1">Pai / Mãe</option>
+                            <option value="2">Conjugue</option>
+                            <option value="3">Irmão / Irmã</option>
+                            <option value="4">Filho / Filha</option>
+                            <option value="5">Avó / Avô</option>
+                            <option value="6">Tio / Tia</option>
+                            <option value="7">Primo / Prima</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-3 px-0 text-end">
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary" onclick="toSave()">ENVIAR</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+      <script src="../../js/app/Dependentes/Cadastro.js"></script>
+    </body>
+</html>

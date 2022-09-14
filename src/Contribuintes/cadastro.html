@@ -12,42 +12,51 @@
         <script src="../../js/bootstrap-5.2.0/bootstrap.js"></script>
     </head>
     <body>
-        <div class="container mt-3">
-          <h3 class="text-center">Cadastro de contribuinte</h3>
-            <form class="row  mt-3">
-              <div class="row mt-3">
-                <div class="col">
-                  <label for="cpf" class="form-label">CPF</label>
-                  <input type="text" class="form-control mask_cpf" id="cpf"placeholder="999.999.999-99">
-                  <span class="valid-cpf text-danger mt-2"></span>
-                </div>
-                <div class="col">
-                    <label for="nome" class="form-label">Nome Completo</label>
-                    <input type="text" class="form-control" id="nome">
-                    <span class="valid-nome text-danger mt-2"></span>
+      <div class="container mt-3">
+        <h2 class="text-center">Cadastro de contribuinte</h2>
+        <div class="row justify-content-between mt-3">
+          <div class="col"> 
+            <h4 class="text">Dados do contribuinte</h4>
+          </div>
+          <div class="col-auto pl-2">
+            <a href="../Dependentes/Cadastro.html" class="btn btn-success">Novo Dependente</a>
+          </div>
+        </div>
+        <form class="row  mt-3">
+            <div class="row mt-3">
+              <div class="col">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="text" class="form-control mask_cpf" id="cpf"placeholder="999.999.999-99">
+                <span class="valid-cpf text-danger mt-2"></span>
+              </div>
+              <div class="col">
+                  <label for="nome" class="form-label">Nome Completo</label>
+                  <input type="text" class="form-control" id="nome">
+                  <span class="valid-nome text-danger mt-2"></span>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                  <label for="numero_dependentes" class="form-label">Número de Dependentes</label>
+                  <input type="text" class="form-control" id="numero_dependentes">
+                  <span class="valid-numero-dependentes text-danger mt-2"></span>
+              </div>
+              <div class="col">
+                  <label for="renda_mensal" class="form-label">Renda Mensal</label>
+                  <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend"><R1>$</R1></span>
+                      <input type="number" class="form-control" id="renda_mensal" aria-describedby="inputGroupPrepend">
+                  </div>
+                  <span class="valid-renda-mensal text-danger mt-2"></span>
+              </div>
+              <div class="row mt-3 px-0 text-end">
+                <div class="col px-0">
+                  <button id="btSalvar" type="button" class="btn btn-success" onclick="toSave()">SALVAR</button>                        
                 </div>
               </div>
-              <div class="row mt-3">
-                <div class="col">
-                    <label for="numero_dependentes" class="form-label">Número de Dependentes</label>
-                    <input type="text" class="form-control" id="numero_dependentes">
-                    <span class="valid-numero-dependentes text-danger mt-2"></span>
-                </div>
-                <div class="col">
-                    <label for="renda_mensal" class="form-label">Renda Mensal</label>
-                    <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend"><R1>$</R1></span>
-                        <input type="number" class="form-control" id="renda_mensal" aria-describedby="inputGroupPrepend">
-                    </div>
-                    <span class="valid-renda-mensal text-danger mt-2"></span>
-                </div>
-                <div class="row mt-3 px-0 text-end">
-                    <div class="col px-0">
-                        <button id="btSalvar" type="button" class="btn btn-success" onclick="toSave()">SALVAR</button>                        
-                    </div>
-                </div>
-            </form>
-        </div>
-        <script src="../../js/cadastro.js"></script>
-  </body>
+            </div>
+          </form>
+      </div>
+      <script src="../../js/app/Contribuintes/cadastro.js"></script>
+    </body>
 </html>
